@@ -1,0 +1,596 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Tilt+Prism&display=swap");
+@font-face {
+  font-family: "Menlo";
+  src: url("asset/fonts/Menlo-Regular.woff.eot");
+  src: url("asset/fonts/Menlo-Regular.woff.eot?#iefix") format("embedded-opentype"), url("asset/fonts/Menlo-Regular.woff.woff") format("woff"), url("asset/fonts/Menlo-Regular.woff.ttf") format("truetype"), url("asset/fonts/Menlo-Regular.woff.svg#Menlo") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "firaSans";
+  src: url("asset/fonts/FiraSans-Regular.ttf.eot");
+  src: url("asset/fonts/FiraSans-Regular.ttf.eot?#iefix") format("embedded-opentype"), url("asset/fonts/FiraSans-Regular.ttf.woff") format("woff"), url("asset/fonts/FiraSans-Regular.ttf.ttf") format("truetype"), url("asset/fonts/FiraSans-Regular.ttf.svg#firaSans") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #fff0e5;
+}
+
+.fullPage {
+  height: 100vh;
+}
+
+.border {
+  border: 1px solid red;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  display: block;
+  width: 85%;
+  max-width: 1248px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav {
+  height: 79px;
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  background-color: #fff0e5;
+  z-index: 10000;
+}
+nav ion-icon {
+  font-size: 18px;
+  vertical-align: middle;
+}
+nav .searchIcon {
+  font-size: 25px;
+  margin-right: 5px;
+}
+nav .navContainer {
+  display: flex;
+}
+nav .navContainer .navMenu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+nav .navContainer .navItem,
+nav .navContainer .navItemRight {
+  padding: 0px 8px;
+}
+nav .navContainer .rightSide {
+  margin-left: auto;
+}
+
+.headerSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.headerSection .teacher,
+.headerSection .logInSection {
+  width: 50%;
+  height: 100%;
+}
+.headerSection .teacherImg {
+  box-shadow: -10px 10px 5px rgb(184, 184, 184);
+  border: 1px solid black;
+  width: 80%;
+}
+.headerSection .teacher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.headerSection .logInSection {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  padding: 3em;
+}
+.headerSection .loginForm .loginHeader {
+  line-height: 2rem;
+  padding-bottom: 10px;
+}
+.headerSection .loginForm input {
+  width: 100%;
+  padding: 10px;
+}
+.headerSection .loginForm button {
+  width: 100%;
+  background-color: #3a11e5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.headerSection .loginForm input[name=email] {
+  margin-bottom: 2em;
+}
+.headerSection .loginForm .password {
+  display: flex;
+  flex-direction: column;
+}
+.headerSection .loginForm .passwordLabel {
+  display: flex;
+  justify-content: space-between;
+}
+.headerSection .signupInfo {
+  margin-top: 30px;
+  font-weight: 100;
+  line-height: 1.6em;
+}
+.headerSection .signupOptText {
+  margin: 10px 0px;
+}
+.headerSection .signupOptLogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(55px, 1fr));
+  grid-template-rows: auto;
+  column-gap: 1em;
+}
+.headerSection .signupLogo {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-top: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+.headerSection .signupLogo ion-icon {
+  padding: 10px 20px;
+  font-size: 25px;
+  vertical-align: center;
+}
+
+.courses {
+  padding-top: 20px;
+  padding-bottom: 50px;
+  color: #fff0e5;
+  background-image: linear-gradient(#10162f 60%, #1e096e 40%);
+}
+.courses .coursesContent {
+  display: flex;
+  flex-direction: column;
+}
+.courses .coursesContent .coursesHeader {
+  text-align: center;
+  padding: 20px;
+}
+.courses .coursesContent .coursesHeader .coursesFirstTitle {
+  font-family: menlo;
+  font-weight: 100;
+}
+.courses .coursesContent .coursesMenuContainer {
+  margin-left: auto;
+  margin-right: auto;
+}
+.courses .coursesContent .coursesMenuContainer .coursesMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  border-bottom: 1px solid white;
+}
+.courses .coursesContent .coursesMenuContainer .coursesMenu .coursesNavItem {
+  padding-left: 9px;
+  padding-right: 9px;
+}
+.courses .coursesContent .coursesMenuContainer .coursesMenu .coursesNavLink {
+  color: #fff0e5;
+  text-decoration: none;
+}
+.courses .coursesContent .coursesMenuContainer .coursesMenu .coursesSelected {
+  padding-bottom: 5px;
+  border-bottom: 3px solid #ffd300;
+}
+.courses .coursesContent .coursesMenuContainer .coursesMenu .newCourse::after {
+  content: "New";
+  color: #10162f;
+  padding: 3px 5px;
+  font-weight: 100;
+  font-size: 50%;
+  background-color: #ffd300;
+  border-radius: 10px;
+}
+.courses .coursesContent .coursesListContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-rows: auto;
+  gap: 25px;
+  padding: 20px;
+}
+.courses .coursesContent .coursesListContainer .courseBox {
+  background-color: #fff0e5;
+  color: #10162f;
+  border-radius: 3px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.courses .coursesContent .coursesListContainer .courseBox .courseHeader {
+  padding: 5px 10px;
+  font-weight: 100;
+  font-size: small;
+  font-family: menlo;
+  background-color: #eafdc5;
+  border-radius: 3px;
+}
+.courses .coursesContent .coursesListContainer .courseBox .courseBody {
+  padding: 10px;
+  font-weight: 100;
+  font-size: small;
+  height: 100%;
+}
+.courses .coursesContent .coursesListContainer .courseBox .courseBody .courseName {
+  margin-bottom: 1em;
+}
+.courses .coursesContent .coursesListContainer .courseBox .courseFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  border-top: 1px dotted black;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  font-size: small;
+}
+.courses .coursesContent .catalogButtonContainer {
+  margin-left: auto;
+  margin-right: auto;
+}
+.courses .coursesContent .catalogButton {
+  background-color: #ceae24;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.code {
+  background-color: #10162f;
+  color: #fff0e5;
+  padding-top: 20px;
+}
+.code .codeContainer {
+  padding-top: 2em;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.code .codeEditor {
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px;
+  border: 1px solid gray;
+  margin-right: 50px;
+}
+.code .codeEditor .logo {
+  grid-column: 1/3;
+  font-size: 2em;
+  padding: 10px 20px;
+  background-color: black;
+  border-bottom: 1px solid gray;
+}
+.code .codeEditor .codeTitle {
+  grid-column: 1/3;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  vertical-align: center;
+}
+.code .codeEditor .codeTitle .codeTitleText {
+  border-bottom: 1px solid gray;
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+.code .codeEditor .codeTitle .codeTitleText:last-child {
+  border-left: 1px solid gray;
+  justify-content: end;
+}
+.code .codeEditor .codeTextBox {
+  grid-column: 1/2;
+  background-color: #201e2f;
+  width: 100%;
+  border-right: 1px solid gray;
+  padding: 20px 0px 20px 20px;
+}
+.code .runButton {
+  grid-column: 1/3;
+  margin-left: auto;
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  border-top: 1px solid gray;
+}
+.code .runButton a {
+  background-color: #ceae24;
+  color: #10162f;
+  text-decoration: none;
+  width: fit-content;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.code .output {
+  grid-column: 2/3;
+}
+.code .welcomeText {
+  width: 40%;
+}
+.code .welcomeText .codeText h4 {
+  font-family: menlo;
+  margin-bottom: 25px;
+}
+.code .welcomeText .codeText h1 {
+  font-size: 50px;
+  padding-bottom: 25px;
+}
+.code .welcomeText .codeText p {
+  line-height: 2em;
+  margin-bottom: 30px;
+}
+.code .welcomeText .codeText a {
+  color: #ceae24;
+  text-decoration: none;
+  width: fit-content;
+  padding: 10px 20px;
+  margin-right: 5px;
+  border-radius: 4px;
+}
+.code .welcomeText .codeText a:hover {
+  background-color: #201e2f;
+}
+.code .welcomeText .codeText .lessonButton {
+  border: 4px solid #ceae24;
+  cursor: pointer;
+}
+
+.quiz {
+  background-color: #ffd300;
+}
+.quiz .quizContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 8rem 0rem;
+}
+.quiz .quizContainer .quizText {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 3rem;
+}
+.quiz .quizContainer .quizText h1 {
+  max-width: 20rem;
+  font-size: 2.5rem;
+  padding: 1rem 0rem;
+}
+.quiz .quizContainer .quizText p {
+  font-size: smaller;
+  line-height: 1.3rem;
+  max-width: 20rem;
+}
+.quiz .quizContainer .quizText a {
+  background-color: #5231f4;
+  color: #eafdc5;
+  text-decoration: none;
+  width: fit-content;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+.quiz .quizContainer .quizImg {
+  text-align: center;
+}
+
+.people::before {
+  content: "";
+  position: absolute;
+  background: url("/asset/img/dotted.png");
+  opacity: 0.3;
+  background-size: 20% 90%;
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 40%;
+  width: 100%;
+  top: 25%;
+  z-index: -1;
+}
+
+.people {
+  position: relative;
+  padding: 3rem 0;
+  z-index: 0;
+}
+.people .peopleHeaderDescription {
+  display: flex;
+  justify-content: space-between;
+  font-size: small;
+  line-height: 2.5em;
+}
+.people .peopleHeaderDescription .exploreList {
+  color: #2400b5;
+  display: flex;
+  align-items: center;
+}
+.people .testimonialContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.people .testimonialContainer .testimonial h3 {
+  line-height: 1.3rem;
+  font-size: 1rem;
+}
+.people .testimonialContainer .testimonial p {
+  font-family: menlo;
+  line-height: 1.1rem;
+  font-size: 0.7rem;
+}
+.people .testimonialContainer .testimonial img {
+  width: 100%;
+  height: auto;
+  border: 1px solid black;
+}
+
+.signUp {
+  background-color: #3a0fe5;
+}
+.signUp .signUpContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 3rem 0rem;
+}
+.signUp .signUpContainer .signUpText {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 3rem;
+  color: #fff0e5;
+}
+.signUp .signUpContainer .signUpText h1 {
+  max-width: 20rem;
+  font-size: 2.5rem;
+  padding: 1rem 0rem;
+}
+.signUp .signUpContainer .signUpText p {
+  font-size: smaller;
+  line-height: 1.3rem;
+  max-width: 20rem;
+}
+.signUp .signUpContainer .signUpText a {
+  background-color: #ffd300;
+  color: #10162f;
+  text-decoration: none;
+  width: fit-content;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+.signUp .signUpContainer .signUpImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signUp .signUpContainer .signUpImg img {
+  width: 80%;
+  height: auto;
+}
+
+.footerContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  margin-top: 2rem;
+}
+.footerContainer .footerLeft,
+.footerContainer .footerRight {
+  display: flex;
+  justify-content: space-around;
+}
+.footerContainer .footerLeft .footerHeader,
+.footerContainer .footerRight .footerHeader {
+  font-weight: 700;
+  padding-bottom: 0.31rem;
+}
+.footerContainer .footerLeft ol,
+.footerContainer .footerRight ol {
+  list-style: none;
+  font-size: small;
+  line-height: 1.3rem;
+}
+.footerContainer .rightBorder {
+  border-left: 1px solid black;
+}
+
+.firstLinksLogo {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.firstLinksLogo .footerLogo {
+  margin-top: auto;
+}
+
+.footerBottom {
+  margin-top: 10px;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  display: flex;
+}
+.footerBottom ol {
+  list-style: none;
+  font-size: small;
+  display: flex;
+}
+.footerBottom ol li::after {
+  content: "  |   ";
+}
+.footerBottom p {
+  font-size: small;
+}
+
+@media only screen and (max-width: 900px) {
+  .navItem {
+    display: none;
+  }
+  .navMenuIcon {
+    display: block;
+  }
+  .headerSection {
+    display: block;
+    height: 100%;
+  }
+  .headerSection .teacher,
+  .headerSection .logInSection {
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+  }
+  .headerSection .signupLogo ion-icon {
+    font-size: 20px;
+    padding: 5px 30px;
+    vertical-align: center;
+  }
+  .code .codeContainer {
+    display: block;
+    padding-top: 10px;
+  }
+  .code .codeEditor,
+  .code .codeText,
+  .code .welcomeText {
+    width: 100%;
+    margin-top: 30px;
+  }
+}

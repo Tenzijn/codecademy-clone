@@ -1,0 +1,638 @@
+// Fonts import
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Tilt+Prism&display=swap');
+@mixin font($font-family, $font-file) {
+  @font-face {
+    font-family: $font-family;
+    src: url($font-file + '.eot');
+    src: url($font-file + '.eot?#iefix') format('embedded-opentype'),
+      url($font-file + '.woff') format('woff'),
+      url($font-file + '.ttf') format('truetype'),
+      url($font-file + '.svg#' + $font-family) format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+@include font('Menlo', 'asset/fonts/Menlo-Regular.woff');
+@include font('firaSans', 'asset/fonts/FiraSans-Regular.ttf');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #fff0e5;
+}
+// Testing class
+.fullPage {
+  height: 100vh;
+}
+.border {
+  border: 1px solid red;
+}
+
+// Utility class
+.hidden {
+  display: none;
+}
+
+.container {
+  display: block;
+  width: 85%;
+  max-width: 1248px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Navigation
+nav {
+  height: 79px;
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  background-color: #fff0e5;
+  z-index: 10000;
+
+  ion-icon {
+    font-size: 18px;
+    vertical-align: middle;
+  }
+
+  .searchIcon {
+    font-size: 25px;
+    margin-right: 5px;
+  }
+
+  .navContainer {
+    display: flex;
+    .navMenu {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+    .navItem,
+    .navItemRight {
+      padding: 0px 8px;
+    }
+    .rightSide {
+      margin-left: auto;
+    }
+  }
+}
+
+// Header Section
+.headerSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  .teacher,
+  .logInSection {
+    width: 50%;
+    height: 100%;
+  }
+
+  .teacherImg {
+    box-shadow: -10px 10px 5px rgb(184, 184, 184);
+    border: 1px solid black;
+    width: 80%;
+  }
+  .teacher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logInSection {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding: 3em;
+  }
+  .loginForm {
+    .loginHeader {
+      line-height: 2rem;
+      padding-bottom: 10px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      // margin-top: 5px;
+    }
+
+    button {
+      width: 100%;
+      background-color: #3a11e5;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[name='email'] {
+      margin-bottom: 2em;
+    }
+    .password {
+      display: flex;
+      flex-direction: column;
+    }
+    .passwordLabel {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .signupInfo {
+    margin-top: 30px;
+    font-weight: 100;
+    line-height: 1.6em;
+  }
+
+  .signupOptText {
+    margin: 10px 0px;
+  }
+
+  .signupOptLogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(55px, 1fr));
+    grid-template-rows: auto;
+    column-gap: 1em;
+  }
+  .signupLogo {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-top: 5px;
+    text-align: center;
+    cursor: pointer;
+    ion-icon {
+      padding: 10px 20px;
+      font-size: 25px;
+      vertical-align: center;
+    }
+  }
+}
+
+// courses Section
+
+.courses {
+  padding-top: 20px;
+  padding-bottom: 50px;
+  color: #fff0e5;
+  // background-color: #10162f;
+  background-image: linear-gradient(#10162f 60%, #1e096e 40%);
+  .coursesContent {
+    display: flex;
+    flex-direction: column;
+    .coursesHeader {
+      text-align: center;
+      padding: 20px;
+      .coursesFirstTitle {
+        font-family: menlo;
+        font-weight: 100;
+      }
+    }
+    .coursesMenuContainer {
+      margin-left: auto;
+      margin-right: auto;
+      .coursesMenu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        border-bottom: 1px solid white;
+        .coursesNavItem {
+          padding-left: 9px;
+          padding-right: 9px;
+        }
+        .coursesNavLink {
+          color: #fff0e5;
+          text-decoration: none;
+        }
+        .coursesSelected {
+          padding-bottom: 5px;
+          border-bottom: 3px solid #ffd300;
+        }
+        .newCourse::after {
+          content: 'New';
+          color: #10162f;
+          padding: 3px 5px;
+          font-weight: 100;
+          font-size: 50%;
+          background-color: #ffd300;
+          border-radius: 10px;
+        }
+      }
+    }
+    .coursesListContainer {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-rows: auto;
+      gap: 25px;
+      padding: 20px;
+      .courseBox {
+        background-color: #fff0e5;
+        color: #10162f;
+        border-radius: 3px;
+        min-height: 220px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .courseHeader {
+          padding: 5px 10px;
+          font-weight: 100;
+          font-size: small;
+          font-family: menlo;
+          background-color: #eafdc5;
+          border-radius: 3px;
+        }
+        .courseBody {
+          padding: 10px;
+          font-weight: 100;
+          font-size: small;
+          height: 100%;
+          .courseName {
+            margin-bottom: 1em;
+          }
+        }
+        .courseFooter {
+          display: flex;
+          justify-content: space-between;
+          align-items: end;
+          border-top: 1px dotted black;
+          margin-left: 10px;
+          margin-right: 10px;
+          padding-top: 5px;
+          padding-bottom: 10px;
+          font-size: small;
+        }
+      }
+    }
+    .catalogButtonContainer {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .catalogButton {
+      background-color: #ceae24;
+      // color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+}
+
+//Code section
+.code {
+  background-color: #10162f;
+  color: #fff0e5;
+  padding-top: 20px;
+  .codeContainer {
+    padding-top: 2em;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .codeEditor {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px;
+    border: 1px solid gray;
+    margin-right: 50px;
+
+    .logo {
+      grid-column: 1/3;
+      font-size: 2em;
+      padding: 10px 20px;
+      background-color: black;
+      border-bottom: 1px solid gray;
+    }
+    .codeTitle {
+      grid-column: 1/3;
+      display: flex;
+      justify-content: space-between;
+      background-color: black;
+      vertical-align: center;
+      .codeTitleText {
+        border-bottom: 1px solid gray;
+        width: 100%;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+      }
+
+      .codeTitleText:last-child {
+        border-left: 1px solid gray;
+        justify-content: end;
+      }
+    }
+    .codeTextBox {
+      grid-column: 1/2;
+      background-color: #201e2f;
+      width: 100%;
+      border-right: 1px solid gray;
+      padding: 20px 0px 20px 20px;
+
+      .codeBlock {
+      }
+    }
+  }
+  .runButton {
+    grid-column: 1/3;
+    margin-left: auto;
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    border-top: 1px solid gray;
+    a {
+      background-color: #ceae24;
+      color: #10162f;
+      text-decoration: none;
+      width: fit-content;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+  .output {
+    grid-column: 2/3;
+  }
+
+  .welcomeText {
+    width: 40%;
+    .codeText {
+      h4 {
+        font-family: menlo;
+        margin-bottom: 25px;
+      }
+      h1 {
+        font-size: 50px;
+        padding-bottom: 25px;
+      }
+      p {
+        line-height: 2em;
+        margin-bottom: 30px;
+      }
+      a {
+        color: #ceae24;
+        text-decoration: none;
+        width: fit-content;
+        padding: 10px 20px;
+        margin-right: 5px;
+        border-radius: 4px;
+      }
+      a:hover {
+        background-color: #201e2f;
+      }
+      .lessonButton {
+        border: 4px solid #ceae24;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.quiz {
+  background-color: #ffd300;
+  .quizContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 8rem 0rem;
+
+    .quizText {
+      display: flex;
+      flex-direction: column;
+      margin: 2rem 3rem;
+      h1 {
+        max-width: 20rem;
+        font-size: 2.5rem;
+        padding: 1rem 0rem;
+      }
+      p {
+        font-size: smaller;
+        line-height: 1.3rem;
+        max-width: 20rem;
+      }
+      a {
+        background-color: #5231f4;
+        color: #eafdc5;
+        text-decoration: none;
+        width: fit-content;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        margin-top: 2rem;
+        cursor: pointer;
+      }
+    }
+    .quizImg {
+      text-align: center;
+    }
+  }
+}
+
+// Testimonial Section
+
+.people::before {
+  content: '';
+  position: absolute;
+  background: url('/asset/img/dotted.png');
+  opacity: 0.3;
+  background-size: 20% 90%;
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 40%;
+  width: 100%;
+  top: 25%;
+  z-index: -1;
+}
+.people {
+  position: relative;
+  padding: 3rem 0;
+  z-index: 0;
+
+  .peopleHeaderDescription {
+    display: flex;
+    justify-content: space-between;
+    font-size: small;
+    line-height: 2.5em;
+    .exploreList {
+      color: #2400b5;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .testimonialContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    .testimonial {
+      h3 {
+        line-height: 1.3rem;
+        font-size: 1rem;
+      }
+      p {
+        font-family: menlo;
+        line-height: 1.1rem;
+        font-size: 0.7rem;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        border: 1px solid black;
+      }
+    }
+  }
+}
+
+//signUp Section
+.signUp {
+  background-color: #3a0fe5;
+  .signUpContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem 0rem;
+
+    .signUpText {
+      display: flex;
+      flex-direction: column;
+      margin: 2rem 3rem;
+      color: #fff0e5;
+      h1 {
+        max-width: 20rem;
+        font-size: 2.5rem;
+        padding: 1rem 0rem;
+      }
+      p {
+        font-size: smaller;
+        line-height: 1.3rem;
+        max-width: 20rem;
+      }
+      a {
+        background-color: #ffd300;
+        color: #10162f;
+        text-decoration: none;
+        width: fit-content;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        margin-top: 2rem;
+        cursor: pointer;
+      }
+    }
+    .signUpImg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 80%;
+        height: auto;
+      }
+    }
+  }
+}
+//footer section
+
+.footerContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  margin-top: 2rem;
+
+  .footerLeft,
+  .footerRight {
+    display: flex;
+    justify-content: space-around;
+
+    .footerHeader {
+      font-weight: 700;
+      padding-bottom: 0.31rem;
+    }
+    ol {
+      list-style: none;
+      font-size: small;
+      line-height: 1.3rem;
+    }
+  }
+  .rightBorder {
+    border-left: 1px solid black;
+  }
+}
+
+.firstLinksLogo {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .footerLogo {
+    margin-top: auto;
+  }
+}
+
+.footerBottom {
+  margin-top: 10px;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  ol {
+    list-style: none;
+    font-size: small;
+    display: flex;
+    li::after {
+      content: '\00a0 \00a0| \00a0 \00a0 ';
+    }
+  }
+  p {
+    font-size: small;
+  }
+  display: flex;
+}
+
+// Responsive for Mobile
+@media only screen and (max-width: 900px) {
+  .navItem {
+    display: none;
+  }
+  .navMenuIcon {
+    display: block;
+  }
+  .headerSection {
+    display: block;
+    height: 100%;
+    .teacher,
+    .logInSection {
+      width: 100%;
+      height: 100%;
+      padding: 1em;
+    }
+    .signupLogo ion-icon {
+      font-size: 20px;
+      padding: 5px 30px;
+      vertical-align: center;
+    }
+  }
+  .code {
+    .codeContainer {
+      display: block;
+      padding-top: 10px;
+    }
+    .codeEditor,
+    .codeText,
+    .welcomeText {
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+}
