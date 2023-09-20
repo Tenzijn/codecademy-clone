@@ -54,6 +54,102 @@ body {
   transform: rotate(180deg);
 }
 
+.icon {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.iconLrg {
+  padding: 10px 20px;
+  font-size: 25px;
+  vertical-align: center;
+}
+
+.course__selected {
+  padding-bottom: 5px;
+  border-bottom: 3px solid #ffd300;
+}
+
+.course__card {
+  background-color: #fff0e5;
+  color: #11162f;
+  border-radius: 3px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.course__card--header {
+  padding: 5px 10px;
+  font-weight: 100;
+  font-size: small;
+  font-family: menlo;
+  background-color: #eafdc5;
+  border-radius: 3px;
+}
+.course__card--body {
+  padding: 10px;
+  font-weight: 100;
+  font-size: small;
+  height: 100%;
+}
+.course__card--body--name {
+  margin-bottom: 1em;
+}
+.course__card--footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  border-top: 1px dotted black;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  font-size: small;
+}
+
+.searchIcon {
+  font-size: 25px;
+  margin-right: 5px;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.title--lrg {
+  font-size: 3rem;
+}
+
+.info--title {
+  max-width: 20rem;
+  padding: 1rem 0rem;
+}
+
+.info--text {
+  font-size: smaller;
+  line-height: 1.3rem;
+  max-width: 20rem;
+}
+
+.info--btn {
+  margin-top: 1rem;
+  max-width: fit-content;
+}
+
+.info--img {
+  text-align: center;
+}
+
 .nav__link,
 .courses__navLink {
   text-decoration: none;
@@ -65,9 +161,42 @@ body {
   opacity: 0.5;
 }
 
-.icon {
-  font-size: 20px;
-  vertical-align: middle;
+.course--card {
+  background-color: #fff0e5;
+  color: #11162f;
+  border-radius: 3px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.course--card .courseHeader {
+  padding: 5px 10px;
+  font-weight: 100;
+  font-size: small;
+  font-family: menlo;
+  background-color: #eafdc5;
+  border-radius: 3px;
+}
+.course--card .courseBody {
+  padding: 10px;
+  font-weight: 100;
+  font-size: small;
+  height: 100%;
+}
+.course--card .courseBody .courseName {
+  margin-bottom: 1em;
+}
+.course--card .courseFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  border-top: 1px dotted black;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  font-size: small;
 }
 
 @keyframes slideIn {
@@ -84,10 +213,8 @@ body {
   background-color: #ffd300;
   animation: slideIn 4s 0ms ease-in;
 }
-.notice__container {
+.notice__content {
   display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
 }
 
@@ -99,109 +226,89 @@ body {
   background-color: #fff0e5;
   z-index: 10000;
 }
-.navbar .searchIcon {
-  font-size: 25px;
-  margin-right: 5px;
-}
-.navbar .navContainer {
+.navbar .navbar__content {
   display: flex;
 }
-.navbar .navContainer .navMenu {
+.navbar .navbar__content .navbar__content__menu {
   list-style-type: none;
   display: flex;
   align-items: center;
   width: 100%;
 }
-.navbar .navContainer .navItem,
-.navbar .navContainer .navItemRight {
+.navbar .navbar__content .navbar__content__menu--item,
+.navbar .navbar__content .navbar__content__menu--itemRight {
   padding: 0px 8px;
 }
-.navbar .navContainer .rightSide {
-  margin-left: auto;
-}
 
-.headerSection {
+.header__content {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 100%;
 }
-.headerSection .teacher,
-.headerSection .logInSection {
+.header__content__teacher, .header__content__logInSection {
   width: 50%;
   height: 100%;
 }
-.headerSection .teacherImg {
+.header__content .teacher--img {
   box-shadow: -10px 10px 5px rgb(184, 184, 184);
   border: 1px solid black;
   width: 80%;
 }
-.headerSection .teacher {
+.header__content__teacher {
   display: flex;
-  align-items: center;
   justify-content: center;
 }
-.headerSection .logInSection {
+.header__content__logInSection {
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: center;
   padding: 3em;
 }
-.headerSection .loginForm .loginHeader {
+.header__content .login__form--header {
   line-height: 2rem;
   padding-bottom: 10px;
 }
-.headerSection .loginForm input {
+.header__content .login__form__input {
   width: 100%;
   padding: 10px;
 }
-.headerSection .loginForm button {
+.header__content .login__form--button {
   width: 100%;
   background-color: #3a11e5;
   color: #fff0e5;
-  padding: 10px 20px;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
 }
-.headerSection .loginForm input[name=email] {
-  margin-bottom: 2em;
+.header__content .login__form input[name=email] {
+  margin-bottom: 2rem;
 }
-.headerSection .loginForm .password {
+.header__content .login__form .password {
   display: flex;
   flex-direction: column;
 }
-.headerSection .loginForm .passwordLabel {
+.header__content .login__form .password--label {
   display: flex;
   justify-content: space-between;
 }
-.headerSection .signupInfo {
+.header__content--info {
   margin-top: 30px;
   font-weight: 100;
   line-height: 1.6em;
 }
-.headerSection .signupOptText {
+.header__content--signUpOptText {
   margin: 10px 0px;
 }
-.headerSection .signupOptLogo {
+.header__content--signUpOptLogo {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(55px, 1fr));
   grid-template-rows: auto;
   column-gap: 1em;
 }
-.headerSection .signupLogo {
+.header__content--signUpLogo {
   background-color: #fff0e5;
   border: 1px solid #000000;
   border-radius: 4px;
   margin-top: 5px;
   text-align: center;
-  cursor: pointer;
-}
-.headerSection .signupLogo ion-icon {
-  padding: 10px 20px;
-  font-size: 25px;
-  vertical-align: center;
 }
 
 .courses {
@@ -210,37 +317,31 @@ body {
   color: #fff0e5;
   background-image: linear-gradient(#11162f 60%, #1e096e 40%);
 }
-.courses .coursesContent {
+.courses__content {
   display: flex;
   flex-direction: column;
 }
-.courses .coursesContent .coursesHeader {
+.courses__content__header {
   text-align: center;
   padding: 20px;
 }
-.courses .coursesContent .coursesHeader .coursesFirstTitle {
+.courses__content__header--firstTitle {
   font-family: menlo;
   font-weight: 100;
 }
-.courses .coursesContent .coursesMenuContainer {
+.courses__content__nav {
   margin-left: auto;
   margin-right: auto;
 }
-.courses .coursesContent .coursesMenuContainer .coursesMenu {
+.courses__content__nav__navMenu {
   display: flex;
-  align-items: center;
-  justify-content: center;
   list-style: none;
   border-bottom: 1px solid #fff0e5;
 }
-.courses .coursesContent .coursesMenuContainer .coursesMenu .coursesNavItem {
+.courses__content__nav__navMenu--navItem {
   padding: 9px;
 }
-.courses .coursesContent .coursesMenuContainer .coursesMenu .coursesSelected {
-  padding-bottom: 5px;
-  border-bottom: 3px solid #ffd300;
-}
-.courses .coursesContent .coursesMenuContainer .coursesMenu .newCourse::after {
+.courses__content__nav__navMenu .newCourse::after {
   content: "New";
   color: #11162f;
   padding: 3px 5px;
@@ -249,60 +350,19 @@ body {
   background-color: #ffd300;
   border-radius: 10px;
 }
-.courses .coursesContent .coursesListContainer {
+.courses__content .courses__cardsContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   grid-template-rows: auto;
   gap: 25px;
   padding: 20px;
 }
-.courses .coursesContent .coursesListContainer .courseBox {
-  background-color: #fff0e5;
-  color: #11162f;
-  border-radius: 3px;
-  min-height: 220px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.courses .coursesContent .coursesListContainer .courseBox .courseHeader {
-  padding: 5px 10px;
-  font-weight: 100;
-  font-size: small;
-  font-family: menlo;
-  background-color: #eafdc5;
-  border-radius: 3px;
-}
-.courses .coursesContent .coursesListContainer .courseBox .courseBody {
-  padding: 10px;
-  font-weight: 100;
-  font-size: small;
-  height: 100%;
-}
-.courses .coursesContent .coursesListContainer .courseBox .courseBody .courseName {
-  margin-bottom: 1em;
-}
-.courses .coursesContent .coursesListContainer .courseBox .courseFooter {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  border-top: 1px dotted black;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding-top: 5px;
-  padding-bottom: 10px;
-  font-size: small;
-}
-.courses .coursesContent .catalogButtonContainer {
+.courses__content .moreBtn--container {
   margin-left: auto;
   margin-right: auto;
 }
-.courses .coursesContent .catalogButton {
+.courses__content .more--btn {
   background-color: #ffd300;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
 }
 
 .code {
@@ -310,14 +370,13 @@ body {
   color: #fff0e5;
   padding-top: 20px;
 }
-.code .codeContainer {
+.code__container {
   padding-top: 2em;
   padding-bottom: 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
-.code .codeEditor {
+.code__editor {
   width: 60%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -325,39 +384,39 @@ body {
   border: 1px solid gray;
   margin-right: 50px;
 }
-.code .codeEditor .logo {
+.code__editor__logo {
   grid-column: 1/3;
   font-size: 2em;
   padding: 10px 20px;
   background-color: black;
   border-bottom: 1px solid gray;
 }
-.code .codeEditor .codeTitle {
+.code__editor__title {
   grid-column: 1/3;
   display: flex;
   justify-content: space-between;
   background-color: black;
   vertical-align: center;
 }
-.code .codeEditor .codeTitle .codeTitleText {
+.code__editor__title__text {
   border-bottom: 1px solid gray;
   width: 100%;
   padding: 10px 20px;
   display: flex;
   align-items: center;
 }
-.code .codeEditor .codeTitle .codeTitleText:last-child {
+.code__editor__title__text:last-child {
   border-left: 1px solid gray;
   justify-content: end;
 }
-.code .codeEditor .codeTextBox {
+.code__editor__textBox {
   grid-column: 1/2;
   background-color: #201e2f;
   width: 100%;
   border-right: 1px solid gray;
   padding: 20px 0px 20px 20px;
 }
-.code .runButton {
+.code__btnContainer {
   grid-column: 1/3;
   margin-left: auto;
   background-color: black;
@@ -366,86 +425,54 @@ body {
   justify-content: end;
   border-top: 1px solid gray;
 }
-.code .runButton a {
+.code__btnContainer .code--btn {
   background-color: #ffd300;
-  color: #11162f;
   text-decoration: none;
-  width: fit-content;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  color: #11162f;
 }
-.code .output {
+.code__output {
   grid-column: 2/3;
 }
-.code .welcomeText {
+.code .code__text {
   width: 40%;
 }
-.code .welcomeText .codeText h4 {
-  font-family: menlo;
+.code .code__text__container__titleSmall {
   margin-bottom: 25px;
 }
-.code .welcomeText .codeText h1 {
-  font-size: 50px;
+.code .code__text__container__titleLrg {
   padding-bottom: 25px;
 }
-.code .welcomeText .codeText p {
+.code .code__text__container__text {
   line-height: 2em;
   margin-bottom: 30px;
 }
-.code .welcomeText .codeText a {
+.code .code__text__container__btn {
   color: #ffd300;
-  text-decoration: none;
   width: fit-content;
-  padding: 10px 20px;
-  margin-right: 5px;
-  border-radius: 4px;
 }
-.code .welcomeText .codeText a:hover {
+.code .code__text__container__btn:hover {
   background-color: #201e2f;
 }
-.code .welcomeText .codeText .lessonButton {
+.code .code__text__container .lesson--btn {
   border: 4px solid #ffd300;
-  cursor: pointer;
 }
 
 .quiz {
   background-color: #ffd300;
 }
-.quiz .quizContainer {
+.quiz__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 8rem 0rem;
 }
-.quiz .quizContainer .quizText {
+.quiz__info {
   display: flex;
   flex-direction: column;
   margin: 2rem 3rem;
 }
-.quiz .quizContainer .quizText h1 {
-  max-width: 20rem;
-  font-size: 2.5rem;
-  padding: 1rem 0rem;
-}
-.quiz .quizContainer .quizText p {
-  font-size: smaller;
-  line-height: 1.3rem;
-  max-width: 20rem;
-}
-.quiz .quizContainer .quizText a {
+.quiz__info__btn {
   background-color: #3a11e5;
   color: #fff0e5;
-  text-decoration: none;
-  width: fit-content;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  margin-top: 2rem;
-  cursor: pointer;
-}
-.quiz .quizContainer .quizImg {
-  text-align: center;
 }
 
 .people::before {
@@ -467,113 +494,88 @@ body {
   padding: 3rem 0;
   z-index: 0;
 }
-.people .peopleHeaderDescription {
+.people__headerDesc {
   display: flex;
   justify-content: space-between;
   font-size: small;
   line-height: 2.5em;
 }
-.people .peopleHeaderDescription .exploreList {
+.people__explore {
   color: #3a11e5;
   display: flex;
   align-items: center;
 }
-.people .testimonialContainer {
+.people .testimonial__card {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   gap: 2rem;
   margin-top: 3rem;
 }
-.people .testimonialContainer .testimonial h3 {
+.people .testimonial__card .testimonial__header {
   line-height: 1.3rem;
   font-size: 1rem;
 }
-.people .testimonialContainer .testimonial p {
+.people .testimonial__card .testimonial__text {
   font-family: menlo;
   line-height: 1.1rem;
   font-size: 0.7rem;
 }
-.people .testimonialContainer .testimonial img {
-  width: 100%;
-  height: auto;
+.people .testimonial__card .testimonial__img {
   border: 1px solid black;
 }
 
 .signUp {
   background-color: #3a11e5;
 }
-.signUp .signUpContainer {
+.signUp__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 3rem 0rem;
 }
-.signUp .signUpContainer .signUpText {
+.signUp__info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  width: 100%;
   margin: 2rem 3rem;
   color: #fff0e5;
 }
-.signUp .signUpContainer .signUpText h1 {
-  max-width: 20rem;
-  font-size: 2.5rem;
-  padding: 1rem 0rem;
-}
-.signUp .signUpContainer .signUpText p {
-  font-size: smaller;
-  line-height: 1.3rem;
-  max-width: 20rem;
-}
-.signUp .signUpContainer .signUpText a {
+.signUp__btn {
   background-color: #ffd300;
   color: #11162f;
-  text-decoration: none;
-  width: fit-content;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  margin-top: 2rem;
-  cursor: pointer;
 }
-.signUp .signUpContainer .signUpImg {
+.signUp--imgContainer {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.signUp .signUpContainer .signUpImg img {
+.signUp--img {
   width: 80%;
   height: auto;
 }
 
-.footerContainer {
+.footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   margin-top: 2rem;
 }
-.footerContainer .footerLeft,
-.footerContainer .footerRight {
+.footer__left, .footer__right {
   display: flex;
   justify-content: space-around;
 }
-.footerContainer .footerLeft .footerHeader,
-.footerContainer .footerRight .footerHeader {
+.footer__header {
   font-weight: 700;
   padding-bottom: 0.31rem;
 }
-.footerContainer .footerLeft ol,
-.footerContainer .footerRight ol {
+.footer__nav__content {
   list-style: none;
   font-size: small;
   line-height: 1.3rem;
 }
-.footerContainer .footerLeft ol li,
-.footerContainer .footerRight ol li {
-  cursor: pointer;
+.footer__item:hover {
+  opacity: 0.5;
 }
-.footerContainer .footerLeft ol li:hover,
-.footerContainer .footerRight ol li:hover {
-  opacity: 0.7;
-}
-.footerContainer .rightBorder {
+.footer .rightBorder {
   border-left: 1px solid #000000;
 }
 
@@ -586,55 +588,67 @@ body {
   margin-top: auto;
 }
 
-.footerBottom {
+.footer__bottom {
   margin-top: 10px;
   padding: 10px 0px;
   display: flex;
   justify-content: space-between;
   border-top: 1px solid black;
 }
-.footerBottom ol {
+.footer__bottom__menu {
   list-style: none;
   font-size: small;
   display: flex;
 }
-.footerBottom ol li::after {
+.footer__bottom__item::after {
   content: "  |   ";
 }
-.footerBottom p {
+.footer__bottom__text {
   font-size: small;
 }
 
 @media only screen and (max-width: 900px) {
-  .navItem {
+  .navbar__content__menu--item {
     display: none;
   }
   .navMenuIcon {
     display: block;
   }
-  .headerSection {
+  .header__content {
     display: block;
     height: 100%;
   }
-  .headerSection .teacher,
-  .headerSection .logInSection {
+  .header__content .header__content__teacher,
+  .header__content .header__content__logInSection {
     width: 100%;
     height: 100%;
     padding: 1em;
   }
-  .headerSection .signupLogo ion-icon {
-    font-size: 20px;
-    padding: 5px 30px;
-    vertical-align: center;
-  }
-  .code .codeContainer {
+  .code .code__container {
     display: block;
     padding-top: 10px;
   }
-  .code .codeEditor,
-  .code .codeText,
-  .code .welcomeText {
+  .code .code__editor,
+  .code .code__text {
     width: 100%;
-    margin-top: 30px;
+    margin: 3rem 0rem;
+  }
+  .quiz__container,
+  .signUp__container {
+    display: block;
+  }
+  .footer__left,
+  .footer__right {
+    margin-bottom: 3rem;
+  }
+  .footer .rightBorder {
+    border-left: 0px solid #fff0e5;
+  }
+  .footer__bottom__menu {
+    display: block;
+  }
+  .footer__bottom__item,
+  .footer__bottom__text {
+    margin: 1rem;
   }
 }

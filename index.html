@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Learn Web</title>
+    <title>Learn Web test</title>
     <link rel="stylesheet" href="./style/css/style.css" />
   </head>
   <body>
     <!-- notice section -->
     <div class="notice">
-      <div class="notice__container container">
+      <div class="notice__content container">
         <p class="container">
           Summer's over - what's your move? Join Pro for 50% off using code
           <em>
@@ -21,34 +21,34 @@
     </div>
     <!-- navigation -->
     <nav class="navbar">
-      <div class="navContainer container">
+      <div class="navbar__content container">
         <div class="logo"><img src="./asset/img/logo.svg" alt="logo" /></div>
-        <ul class="navMenu">
-          <li class="navItem">
+        <ul class="navbar__content__menu">
+          <li class="navbar__content__menu--item">
             <a href="#" class="nav__link dark"
               >Catalog
               <ion-icon class="icon nav--icon" name="arrow-dropdown"></ion-icon
             ></a>
           </li>
-          <li class="navItem">
+          <li class="navbar__content__menu--item">
             <a href="#" class="nav__link dark"
               >Resources
               <ion-icon class="icon nav--icon" name="arrow-dropdown"></ion-icon
             ></a>
           </li>
-          <li class="navItem">
+          <li class="navbar__content__menu--item">
             <a href="#" class="nav__link dark"
               >Community
               <ion-icon class="icon nav--icon" name="arrow-dropdown"></ion-icon
             ></a>
           </li>
-          <li class="navItem">
+          <li class="navbar__content__menu--item">
             <a href="#" class="nav__link dark"
               >Pricing
               <ion-icon class="icon nav--icon" name="arrow-dropdown"></ion-icon
             ></a>
           </li>
-          <li class="navItem">
+          <li class="navbar__content__menu--item">
             <a href="#" class="nav__link dark"
               >For Teams
               <ion-icon
@@ -57,7 +57,7 @@
               ></ion-icon>
             </a>
           </li>
-          <li class="navItemRight shiftRight">
+          <li class="navbar__content__menu--itemRight shiftRight">
             <a href="#" class="nav__search dark"
               ><ion-icon
                 class="icon"
@@ -66,10 +66,10 @@
               ></ion-icon
             ></a>
           </li>
-          <li class="navItemRight">
+          <li class="navbar__content__menu--itemRight">
             <a href="#" class="nav__link dark">Log In</a>
           </li>
-          <li class="navItemRight navMenuIcon hidden">
+          <li class="navbar__content__menu--itemRight navMenuIcon hidden">
             <a href="#" class="nav__link dark"
               ><ion-icon class="icon" name="menu"></ion-icon
             ></a>
@@ -80,60 +80,72 @@
 
     <!-- Header Section -->
     <header class="container">
-      <section class="headerSection">
-        <div class="teacher">
+      <section class="header__content">
+        <div class="header__content__teacher">
           <img
             src="./asset/img/teacher.webp"
             alt="teacher"
-            class="teacherImg"
+            class="img teacher--img"
           />
         </div>
-        <div class="logInSection">
-          <form action="submit" class="loginForm">
-            <h2 class="loginHeader">
+
+        <!-- signup form  -->
+        <div class="header__content__logInSection">
+          <form action="submit" class="login__form">
+            <h2 class="login__form--header">
               Join the millions learning to code with Codecademy for free
             </h2>
             <div class="email">
-              <label for="email">Email</label><br />
-              <input type="text" name="email" /><br />
+              <label for="email">email </label><br />
+              <input
+                type="text"
+                name="email"
+                class="login__form__input"
+              /><br />
             </div>
             <div class="password">
-              <div class="passwordLabel">
-                <label for="Password">Password</label>
+              <div class="password--label">
+                <label for="password">password</label>
                 <ion-icon
                   class="icon"
                   name="information-circle-outline"
-                  class="infoIcon"
+                  class="infoicon"
                 ></ion-icon>
               </div>
-              <input type="password" name="password" /><br />
+              <input
+                type="password"
+                name="password"
+                class="login__form__input"
+              /><br />
             </div>
-            <button type="submit" name="submit">Sign up</button>
+            <button type="submit" name="submit" class="btn login__form--button">
+              Sign up
+            </button>
           </form>
-          <div class="signupInfo">
+          <div class="header__content--info">
             <p>By signing up for Codecademy, you agree to Codecademy's</p>
             <a href="#" href="#">Terms of Service</a> &
             <a href="#" href="#"> Privacy Policy.</a>
           </div>
-          <div class="signupOptText">
+          <div class="header__content--signUpOptText">
             <p><b>Or sign up using:</b></p>
           </div>
 
-          <div class="signupOptLogo">
-            <div class="signupLogo">
-              <ion-icon class="icon" name="logo-google"></ion-icon>
+          <div class="header__content--signUpOptLogo">
+            <div class="header__content--signUpLogo cursor">
+              <ion-icon class="icon iconLrg" name="logo-google"></ion-icon>
             </div>
-            <div class="signupLogo">
-              <ion-icon class="icon" name="logo-facebook"></ion-icon>
+            <div class="header__content--signUpLogo cursor">
+              <ion-icon class="icon iconLrg" name="logo-facebook"></ion-icon>
             </div>
-            <div class="signupLogo">
-              <ion-icon class="icon" name="logo-linkedin"></ion-icon>
+            <div class="header__content--signUpLogo cursor">
+              <ion-icon class="icon iconLrg" name="logo-linkedin"></ion-icon>
             </div>
-            <div class="signupLogo">
-              <ion-icon class="icon" name="logo-linkedin"></ion-icon>
+            <div class="header__content--signUpLogo cursor">
+              <ion-icon class="icon iconLrg" name="logo-linkedin"></ion-icon>
             </div>
-            <div class="signupLogo">
-              <ion-icon class="icon" name="logo-apple"></ion-icon>
+            <div class="header__content--signUpLogo cursor">
+              <ion-icon class="icon iconLrg" name="logo-apple"></ion-icon>
             </div>
           </div>
         </div>
@@ -142,44 +154,46 @@
 
     <!-- Course Section -->
     <section class="courses">
-      <div class="container coursesContent">
-        <div class="coursesHeader">
-          <h5 class="coursesFirstTitle">Start Learning</h5>
+      <div class="container courses__content">
+        <div class="courses__content__header">
+          <h5 class="courses__content__header--firstTitle">Start Learning</h5>
           <h1 class="coursesSecondTitle">Popular Courses</h1>
         </div>
-        <div class="coursesMenuContainer">
-          <ul class="coursesMenu">
-            <li class="coursesNavItem coursesSelected newCourse">
+        <div class="courses__content__nav">
+          <ul class="courses__content__nav__navMenu">
+            <li
+              class="courses__content__nav__navMenu__navItem course__selected newCourse"
+            >
               <a href="#" class="courses__navLink light">AI</a>
             </li>
-            <li class="coursesNavItem">
+            <li class="courses__content__nav__navMenu--navItem">
               <a href="#" class="courses__navLink light">Free</a>
             </li>
-            <li class="coursesNavItem">
+            <li class="courses__content__nav__navMenu--navItem">
               <a href="#" class="courses__navLink light">New to coding</a>
             </li>
-            <li class="coursesNavItem">
+            <li class="courses__content__nav__navMenu--navItem">
               <a href="#" class="courses__navLink light">Most popular</a>
             </li>
-            <li class="coursesNavItem">
+            <li class="courses__content__nav__navMenu--navItem">
               <a href="#" class="courses__navLink light">Skill paths</a>
             </li>
-            <li class="coursesNavItem">
+            <li class="courses__content__nav__navMenu--navItem">
               <a href="#" class="courses__navLink light">Career paths</a>
             </li>
           </ul>
         </div>
-        <div class="coursesListContainer">
-          <div class="courseBox">
-            <div class="courseHeader">Free course</div>
-            <div class="courseBody">
-              <h4 class="courseName">Intro to Generative AI</h4>
+        <div class="courses__cardsContainer">
+          <div class="course__card">
+            <div class="course__card--header">Free course</div>
+            <div class="course__card--body">
+              <h4 class="course__card--body--name">Intro to Generative AI</h4>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Doloremque Lorem, ipsum dolor sit
               </p>
             </div>
-            <div class="courseFooter">
+            <div class="course__card--footer">
               <p>
                 <ion-icon class="icon" name="podium"></ion-icon>
                 <b> Beginner </b> Friendly
@@ -187,16 +201,17 @@
               <p>1 lesson</p>
             </div>
           </div>
-          <div class="courseBox">
-            <div class="courseHeader">Free course</div>
-            <div class="courseBody">
-              <h4 class="courseName">Intro to Generative AI</h4>
+
+          <div class="course__card">
+            <div class="course__card--header">Free course</div>
+            <div class="course__card--body">
+              <h4 class="course__card--body--name">Intro to Generative AI</h4>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Doloremque Lorem, ipsum dolor sit
               </p>
             </div>
-            <div class="courseFooter">
+            <div class="course__card--footer">
               <p>
                 <ion-icon class="icon" name="podium"></ion-icon>
                 <b> Beginner </b> Friendly
@@ -204,16 +219,17 @@
               <p>1 lesson</p>
             </div>
           </div>
-          <div class="courseBox">
-            <div class="courseHeader">Free course</div>
-            <div class="courseBody">
-              <h4 class="courseName">Intro to Generative AI</h4>
+
+          <div class="course__card">
+            <div class="course__card--header">Free course</div>
+            <div class="course__card--body">
+              <h4 class="course__card--body--name">Intro to Generative AI</h4>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Doloremque Lorem, ipsum dolor sit
               </p>
             </div>
-            <div class="courseFooter">
+            <div class="course__card--footer">
               <p>
                 <ion-icon class="icon" name="podium"></ion-icon>
                 <b> Beginner </b> Friendly
@@ -221,26 +237,27 @@
               <p>1 lesson</p>
             </div>
           </div>
-          <div class="courseBox">
-            <div class="courseHeader">Free course</div>
-            <div class="courseBody">
-              <h4 class="courseName">Intro to Generative AI</h4>
+
+          <div class="course__card">
+            <div class="course__card--header">Free course</div>
+            <div class="course__card--body">
+              <h4 class="course__card--body--name">Intro to Generative AI</h4>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Doloremque Lorem, ipsum dolor sit
               </p>
             </div>
-            <div class="courseFooter">
+            <div class="course__card--footer">
               <p>
-                <ion-icon name="podium"></ion-icon>
+                <ion-icon class="icon" name="podium"></ion-icon>
                 <b> Beginner </b> Friendly
               </p>
               <p>1 lesson</p>
             </div>
           </div>
         </div>
-        <div class="catalogButtonContainer">
-          <button type="button" class="catalogButton">
+        <div class="moreBtn--container">
+          <button type="button" class="btn more--btn">
             Explore Full Catalog
           </button>
         </div>
@@ -249,22 +266,22 @@
 
     <!-- code Section -->
     <section class="code">
-      <div class="codeContainer container">
-        <div class="codeEditor">
-          <div class="logo">
+      <div class="code__container container">
+        <div class="code__editor">
+          <div class="code__editor__logo">
             <ion-icon name="logo-codepen"></ion-icon>
           </div>
-          <div class="codeTitle">
-            <div class="codeTitleText">
+          <div class="code__editor__title">
+            <div class="code__editor__title__text">
               <ion-icon name="arrow-dropleft" size="large"></ion-icon>
               <p>Code</p>
             </div>
-            <div class="codeTitleText">
+            <div class="code__editor__title__text">
               <p>Output</p>
               <ion-icon name="arrow-dropright" size="large"></ion-icon>
             </div>
           </div>
-          <div class="codeTextBox">
+          <div class="code__editor__textBox">
             <code>
               var myObj, myJSON, <br />
               myObj = { <br />
@@ -278,22 +295,28 @@
               document. <br />getElementById("demo") <br />
               .innerHTML = obj.name;
             </code>
-            <div class="output"></div>
+            <div class="code__output"></div>
           </div>
-          <div class="runButton">
-            <a href="#" type="button" class="runButton">Run</a>
+          <div class="code__btnContainer">
+            <a href="#" type="button" class="btn code--btn">Run</a>
           </div>
         </div>
-        <div class="welcomeText">
-          <div class="codeText">
-            <h4>Beginners welcome</h4>
-            <h1>Start coding in seconds</h1>
-            <p>
+        <div class="code__text">
+          <div class="code__text__container">
+            <h4 class="code__text__container__titleSmall">Beginners welcome</h4>
+            <h1 class="code__text__container__headerLrg title--lrg">
+              Start coding in seconds
+            </h1>
+            <p class="code__text__container__text">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Explicabo porro est placeat iure, culpa sed!
             </p>
-            <a href="#" class="lessonButton">Continue lesson</a>
-            <a href="#">More beginner courses</a>
+            <a href="#" class="btn lesson--btn code__text__container__btn"
+              >Continue lesson</a
+            >
+            <a href="#" class="btn code__text__container__btn"
+              >More beginner courses</a
+            >
           </div>
         </div>
       </div>
@@ -301,53 +324,79 @@
 
     <!-- quiz Section -->
     <section class="quiz">
-      <div class="quizContainer container">
-        <div class="quizText">
-          <h1>Not sure where to start</h1>
-          <p>
+      <div class="quiz__container container">
+        <div class="quiz__info">
+          <h1 class="title--lrg info--title">Not sure where to start</h1>
+          <p class="info--text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
             dolorem corporis ipsum unde qui maiores ab quibusdam eaque quos
             nostrum?
           </p>
-          <a href="#">Take the quiz</a>
+          <a href="#" class="btn info--btn quiz__info__btn">Take the quiz</a>
         </div>
-        <div class="quizImg"><img src="./asset/img/window.svg" alt="" /></div>
+        <div class="info--img">
+          <img src="./asset/img/window.svg" alt="window" />
+        </div>
       </div>
     </section>
 
     <!-- testimonial Section -->
     <section class="people">
-      <div class="peopleContainer container">
-        <div class="peopleHeader">
+      <div class="container">
+        <div class="people__header">
           <h1>Stories from real people</h1>
-          <div class="peopleHeaderDescription">
+          <div class="people__headerDesc">
             <p>Watch and read stories from the Codecademy community</p>
-            <div class="exploreList">
+            <div class="people__explore">
               <a>Explore more stories </a>
               <ion-icon name="arrow-round-forward"></ion-icon>
             </div>
           </div>
         </div>
-        <div class="testimonialContainer">
+        <div class="testimonial__card">
           <div class="testimonial">
-            <img src="./asset/img/Cristian-Tera__n.jpeg" alt="cristian" />
-            <h3>Technical Analyst to Front-End Engineer in 6 Months</h3>
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <img
+              class="testimonial__img img"
+              src="./asset/img/Cristian-Tera__n.jpeg"
+              alt="cristian"
+            />
+            <h3 class="testimonial__header">
+              Technical Analyst to Front-End Engineer in 6 Months
+            </h3>
+            <p class="testimonial__text">ipsum dolor sit amet consectetur.</p>
           </div>
           <div class="testimonial">
-            <img src="./asset/img/De-Shaun-Broadnax.jpeg" alt="cristian" />
-            <h3>Technical Analyst to Front-End Engineer in 6 Months</h3>
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <img
+              class="testimonial__img img"
+              src="./asset/img/De-Shaun-Broadnax.jpeg"
+              alt="cristian"
+            />
+            <h3 class="testimonial__header">
+              Technical Analyst to Front-End Engineer in 6 Months
+            </h3>
+            <p class="testimonial__text">ipsum dolor sit amet consectetur.</p>
           </div>
           <div class="testimonial">
-            <img src="./asset/img/SerenaIsone1.jpeg" alt="cristian" />
-            <h3>Technical Analyst to Front-End Engineer in 6 Months</h3>
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <img
+              class="testimonial__img img"
+              src="./asset/img/SerenaIsone1.jpeg"
+              alt="cristian"
+            />
+            <h3 class="testimonial__header">
+              Technical Analyst to Front-End Engineer in 6 Months
+            </h3>
+            <p class="testimonial__text">ipsum dolor sit amet consectetur.</p>
           </div>
           <div class="testimonial">
-            <img src="./asset/img/Julia-Jubileu.jpeg" alt="cristian" />
-            <h3>Technical Analyst to Front-End Engineer in 6 Months</h3>
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <img
+              class="testimonial__img img"
+              src="./asset/img/Julia-Jubileu.jpeg"
+              alt="cristian"
+            />
+            <h3 class="testimonial__header">
+              Technical Analyst to Front-End Engineer in 6 Months
+            </h3>
+            <p class="testimonial__text">ipsum dolor sit amet consectetur.</p>
           </div>
         </div>
       </div>
@@ -355,127 +404,137 @@
 
     <!-- signUp Section -->
     <section class="signUp">
-      <div class="signUpContainer container">
-        <div class="signUpImg">
-          <img src="./asset/img/student.webp" alt="student img" />
+      <div class="signUp__container container">
+        <div class="info--img signUp--imgContainer">
+          <img
+            src="./asset/img/student.webp"
+            alt="window"
+            class="signUp--img"
+          />
         </div>
-        <div class="signUpText">
-          <h1>Not sure where to start</h1>
-          <p>
+        <div class="signUp__info">
+          <h1 class="title--lrg info--title">Not sure where to start</h1>
+          <p class="info--text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
             dolorem corporis ipsum unde qui maiores ab quibusdam eaque quos
             nostrum?
           </p>
-          <a href="#">Take the quiz</a>
+          <a href="#" class="btn info--btn signUp__btn">Sign Up</a>
         </div>
       </div>
     </section>
 
     <!-- footer section -->
     <footer>
-      <div class="footerContainer container">
-        <div class="footerLeft">
+      <div class="footer container">
+        <div class="footer__left">
           <div class="company">
-            <ol class="links firstLinksLogo">
-              <li class="footerHeader">Company</li>
-              <li>About</li>
-              <li>Careers</li>
-              <li>Affiliates</li>
-              <li class="footerLogo">
+            <ol class="footer__nav__content firstlinkslogo">
+              <li class="footer__header">company</li>
+              <li class="cursor footer__item">about</li>
+              <li class="cursor footer__item">careers</li>
+              <li class="cursor footer__item">affiliates</li>
+              <li class="footerlogo">
                 <img src="/asset/img/logo.svg" alt="logo" />
               </li>
             </ol>
           </div>
           <div class="resources">
-            <ol class="links">
-              <li class="footerHeader">Articles</li>
-              <li>Blog</li>
-              <li>CheatSheet</li>
-              <li>Docs</li>
-              <li>Projects</li>
-              <li>Videos</li>
-              <li class="footerHeader">WorksPlaces</li>
-              <li>Support</li>
-              <li>Help Center</li>
+            <ol class="footer__nav__content">
+              <li class="footer__header">articles</li>
+              <li class="cursor footer__item">blog</li>
+              <li class="cursor footer__item">cheatsheet</li>
+              <li class="cursor footer__item">docs</li>
+              <li class="cursor footer__item">projects</li>
+              <li class="cursor footer__item">videos</li>
+              <li class="footer__header">worksplaces</li>
+              <li class="cursor footer__item">support</li>
+              <li class="cursor footer__item">help center</li>
             </ol>
           </div>
           <div class="resources">
-            <ol class="links">
-              <li class="footerHeader">Articles</li>
-              <li>Blog</li>
-              <li>CheatSheet</li>
-              <li>Docs</li>
-              <li>Projects</li>
-              <li>Videos</li>
-              <li>WorksPlaces</li>
-              <li>Support</li>
-              <li>CheatSheet</li>
-              <li>Docs</li>
-              <li>Projects</li>
-              <li>Videos</li>
-              <li>WorksPlaces</li>
-              <li>Support</li>
-              <li>Help Center</li>
+            <ol class="footer__nav__content">
+              <li class="footer__header">articles</li>
+              <li class="cursor footer__item">blog</li>
+              <li class="cursor footer__item">cheatsheet</li>
+              <li class="cursor footer__item">docs</li>
+              <li class="cursor footer__item">projects</li>
+              <li class="cursor footer__item">videos</li>
+              <li class="cursor footer__item">worksplaces</li>
+              <li class="cursor footer__item">support</li>
+              <li class="cursor footer__item">cheatsheet</li>
+              <li class="cursor footer__item">docs</li>
+              <li class="cursor footer__item">projects</li>
+              <li class="cursor footer__item">videos</li>
+              <li class="cursor footer__item">worksplaces</li>
+              <li class="cursor footer__item">support</li>
+              <li class="cursor footer__item">help center</li>
             </ol>
           </div>
         </div>
-        <div class="footerRight rightBorder">
+        <div class="footer__right rightBorder">
           <div class="company">
-            <ol class="links">
-              <li class="footerHeader">Company</li>
-              <li>About</li>
-              <li>Careers</li>
-              <li>CheatSheet</li>
-              <li>Docs</li>
-              <li>Projects</li>
-              <li>Videos</li>
-              <li>WorksPlaces</li>
-              <li>Support</li>
-              <li>CheatSheet</li>
-              <li>Docs</li>
-              <li>Projects</li>
-              <li>Videos</li>
-              <li>WorksPlaces</li>
-              <li>Support</li>
-              <li>Affiliates</li>
+            <ol class="footer__nav__content">
+              <li class="footer__header">Company</li>
+              <li class="cursor footer__item">About</li>
+              <li class="cursor footer__item">Careers</li>
+              <li class="cursor footer__item">CheatSheet</li>
+              <li class="cursor footer__item">Docs</li>
+              <li class="cursor footer__item">Projects</li>
+              <li class="cursor footer__item">Videos</li>
+              <li class="cursor footer__item">WorksPlaces</li>
+              <li class="cursor footer__item">Support</li>
+              <li class="cursor footer__item">CheatSheet</li>
+              <li class="cursor footer__item">Docs</li>
+              <li class="cursor footer__item">Projects</li>
+              <li class="cursor footer__item">Videos</li>
+              <li class="cursor footer__item">WorksPlaces</li>
+              <li class="cursor footer__item">Support</li>
+              <li class="cursor footer__item">Affiliates</li>
             </ol>
           </div>
           <div class="resources">
-            <ol class="links">
-              <li class="footerHeader">Articles</li>
-              <li>Blog</li>
-              <li>CheatSheet</li>
-              <li>Docs</li>
-              <li>Projects</li>
-              <li>Videos</li>
-              <li>WorksPlaces</li>
-              <li>Support</li>
-              <li>Help Center</li>
+            <ol class="footer__nav__content">
+              <li class="footer__header">Articles</li>
+              <li class="cursor footer__item">Blog</li>
+              <li class="cursor footer__item">CheatSheet</li>
+              <li class="cursor footer__item">Docs</li>
+              <li class="cursor footer__item">Projects</li>
+              <li class="cursor footer__item">Videos</li>
+              <li class="cursor footer__item">WorksPlaces</li>
+              <li class="cursor footer__item">Support</li>
+              <li class="cursor footer__item">Help Center</li>
             </ol>
           </div>
           <div class="resources">
-            <ol class="links">
-              <li class="footerHeader">Articles</li>
-              <li>Blog</li>
-              <li>CheatSheet</li>
-              <li>Docs</li>
-              <li>Projects</li>
-              <li>Videos</li>
-              <li>WorksPlaces</li>
-              <li>Support</li>
-              <li>Help Center</li>
+            <ol class="footer__nav__content">
+              <li class="footer__header">Articles</li>
+              <li class="cursor footer__item">Blog</li>
+              <li class="cursor footer__item">CheatSheet</li>
+              <li class="cursor footer__item">Docs</li>
+              <li class="cursor footer__item">Projects</li>
+              <li class="cursor footer__item">Videos</li>
+              <li class="cursor footer__item">WorksPlaces</li>
+              <li class="cursor footer__item">Support</li>
+              <li class="cursor footer__item">Help Center</li>
             </ol>
           </div>
         </div>
       </div>
-      <div class="footerBottom container">
-        <ol>
-          <li>Privacy Policy</li>
-          <li>Cookie Policy</li>
-          <li>Do Not Sell My Personal Information</li>
-          <li>Terms</li>
+      <div class="footer__bottom container">
+        <ol class="footer__bottom__menu">
+          <li class="cursor footer__item footer__bottom__item">
+            Privacy Policy
+          </li>
+          <li class="cursor footer__item footer__bottom__item">
+            Cookie Policy
+          </li>
+          <li class="cursor footer__item footer__bottom__item">
+            Do Not Sell My Personal Information
+          </li>
+          <li class="cursor footer__item footer__bottom__item">Terms</li>
         </ol>
-        <p>Clone with ❤️ by tibet.dev</p>
+        <p class="footer__bottom__text">Clone with ❤️ by tibet.dev</p>
       </div>
     </footer>
     <!-- script -->
