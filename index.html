@@ -7,40 +7,72 @@
     <link rel="stylesheet" href="./style/css/style.css" />
   </head>
   <body>
+    <!-- notice section -->
+    <div class="notice">
+      <div class="notice__container container">
+        <p class="container">
+          Summer's over - what's your move? Join Pro for 50% off using code
+          <em>
+            <b class="dark"> MAKEITHAPPEN</b>
+          </em>
+        </p>
+        <ion-icon name="close" class="cursor closeNotice"></ion-icon>
+      </div>
+    </div>
     <!-- navigation -->
-    <nav class="">
+    <nav class="navbar">
       <div class="navContainer container">
         <div class="logo"><img src="./asset/img/logo.svg" alt="logo" /></div>
         <ul class="navMenu">
           <li class="navItem">
-            <a class="navLink"
-              >Catalog <ion-icon name="arrow-dropdown"></ion-icon
+            <a href="#" class="nav__link dark"
+              >Catalog
+              <ion-icon class="icon nav--icon" name="arrow-dropdown"></ion-icon
             ></a>
           </li>
           <li class="navItem">
-            <a class="navLink"
-              >Resources <ion-icon name="arrow-dropdown"></ion-icon
+            <a href="#" class="nav__link dark"
+              >Resources
+              <ion-icon class="icon nav--icon" name="arrow-dropdown"></ion-icon
             ></a>
           </li>
           <li class="navItem">
-            <a class="navLink"
-              >Community <ion-icon name="arrow-dropdown"></ion-icon
+            <a href="#" class="nav__link dark"
+              >Community
+              <ion-icon class="icon nav--icon" name="arrow-dropdown"></ion-icon
             ></a>
           </li>
           <li class="navItem">
-            <a class="navLink"
-              >Pricing <ion-icon name="arrow-dropdown"></ion-icon
+            <a href="#" class="nav__link dark"
+              >Pricing
+              <ion-icon class="icon nav--icon" name="arrow-dropdown"></ion-icon
             ></a>
           </li>
-          <li class="navItem"><a class="navLink">For Teams</a></li>
-          <li class="navItemRight rightSide">
-            <a class="navLink"
-              ><ion-icon name="search" class="searchIcon"></ion-icon
+          <li class="navItem">
+            <a href="#" class="nav__link dark"
+              >For Teams
+              <ion-icon
+                class="icon nav--icon hidden"
+                name="arrow-dropdown"
+              ></ion-icon>
+            </a>
+          </li>
+          <li class="navItemRight shiftRight">
+            <a href="#" class="nav__search dark"
+              ><ion-icon
+                class="icon"
+                name="search"
+                class="searchIcon"
+              ></ion-icon
             ></a>
           </li>
-          <li class="navItemRight"><a class="navLink">Log In</a></li>
+          <li class="navItemRight">
+            <a href="#" class="nav__link dark">Log In</a>
+          </li>
           <li class="navItemRight navMenuIcon hidden">
-            <a class="navLink"><ion-icon name="menu"></ion-icon></a>
+            <a href="#" class="nav__link dark"
+              ><ion-icon class="icon" name="menu"></ion-icon
+            ></a>
           </li>
         </ul>
       </div>
@@ -69,8 +101,9 @@
               <div class="passwordLabel">
                 <label for="Password">Password</label>
                 <ion-icon
+                  class="icon"
                   name="information-circle-outline"
-                  class="infoIcon rightSide"
+                  class="infoIcon"
                 ></ion-icon>
               </div>
               <input type="password" name="password" /><br />
@@ -79,7 +112,8 @@
           </form>
           <div class="signupInfo">
             <p>By signing up for Codecademy, you agree to Codecademy's</p>
-            <a href="#">Terms of Service</a> & <a href="#"> Privacy Policy.</a>
+            <a href="#" href="#">Terms of Service</a> &
+            <a href="#" href="#"> Privacy Policy.</a>
           </div>
           <div class="signupOptText">
             <p><b>Or sign up using:</b></p>
@@ -87,19 +121,19 @@
 
           <div class="signupOptLogo">
             <div class="signupLogo">
-              <ion-icon name="logo-google"></ion-icon>
+              <ion-icon class="icon" name="logo-google"></ion-icon>
             </div>
             <div class="signupLogo">
-              <ion-icon name="logo-facebook"></ion-icon>
+              <ion-icon class="icon" name="logo-facebook"></ion-icon>
             </div>
             <div class="signupLogo">
-              <ion-icon name="logo-linkedin"></ion-icon>
+              <ion-icon class="icon" name="logo-linkedin"></ion-icon>
             </div>
             <div class="signupLogo">
-              <ion-icon name="logo-linkedin"></ion-icon>
+              <ion-icon class="icon" name="logo-linkedin"></ion-icon>
             </div>
             <div class="signupLogo">
-              <ion-icon name="logo-apple"></ion-icon>
+              <ion-icon class="icon" name="logo-apple"></ion-icon>
             </div>
           </div>
         </div>
@@ -116,22 +150,22 @@
         <div class="coursesMenuContainer">
           <ul class="coursesMenu">
             <li class="coursesNavItem coursesSelected newCourse">
-              <a href="#" class="coursesNavLink">AI</a>
+              <a href="#" class="courses__navLink light">AI</a>
             </li>
             <li class="coursesNavItem">
-              <a href="#" class="coursesNavLink">Free</a>
+              <a href="#" class="courses__navLink light">Free</a>
             </li>
             <li class="coursesNavItem">
-              <a href="#" class="coursesNavLink">New to coding</a>
+              <a href="#" class="courses__navLink light">New to coding</a>
             </li>
             <li class="coursesNavItem">
-              <a href="#" class="coursesNavLink">Most popular</a>
+              <a href="#" class="courses__navLink light">Most popular</a>
             </li>
             <li class="coursesNavItem">
-              <a href="#" class="coursesNavLink">Skill paths</a>
+              <a href="#" class="courses__navLink light">Skill paths</a>
             </li>
             <li class="coursesNavItem">
-              <a href="#" class="coursesNavLink">Career paths</a>
+              <a href="#" class="courses__navLink light">Career paths</a>
             </li>
           </ul>
         </div>
@@ -147,7 +181,7 @@
             </div>
             <div class="courseFooter">
               <p>
-                <ion-icon name="podium"></ion-icon>
+                <ion-icon class="icon" name="podium"></ion-icon>
                 <b> Beginner </b> Friendly
               </p>
               <p>1 lesson</p>
@@ -164,7 +198,7 @@
             </div>
             <div class="courseFooter">
               <p>
-                <ion-icon name="podium"></ion-icon>
+                <ion-icon class="icon" name="podium"></ion-icon>
                 <b> Beginner </b> Friendly
               </p>
               <p>1 lesson</p>
@@ -181,7 +215,7 @@
             </div>
             <div class="courseFooter">
               <p>
-                <ion-icon name="podium"></ion-icon>
+                <ion-icon class="icon" name="podium"></ion-icon>
                 <b> Beginner </b> Friendly
               </p>
               <p>1 lesson</p>
