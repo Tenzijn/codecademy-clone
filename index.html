@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Learn Web test</title>
+    <title>codecademy clone</title>
     <link rel="stylesheet" href="./style/css/style.css" />
   </head>
   <body>
@@ -22,59 +22,109 @@
     <!-- navigation -->
     <nav class="navbar">
       <div class="navbar__content container">
-        <div class="logo"><img src="./asset/img/logo.svg" alt="logo" /></div>
-        <ul class="navbar__content__menu">
-          <li class="navbar__content__menu--item">
-            <a href="#" class="nav__link dark"
-              >Catalog
-              <ion-icon class="icon nav--icon" name="arrow-dropdown"></ion-icon
-            ></a>
-          </li>
-          <li class="navbar__content__menu--item">
-            <a href="#" class="nav__link dark"
-              >Resources
-              <ion-icon class="icon nav--icon" name="arrow-dropdown"></ion-icon
-            ></a>
-          </li>
-          <li class="navbar__content__menu--item">
-            <a href="#" class="nav__link dark"
-              >Community
-              <ion-icon class="icon nav--icon" name="arrow-dropdown"></ion-icon
-            ></a>
-          </li>
-          <li class="navbar__content__menu--item">
-            <a href="#" class="nav__link dark"
-              >Pricing
-              <ion-icon class="icon nav--icon" name="arrow-dropdown"></ion-icon
-            ></a>
-          </li>
-          <li class="navbar__content__menu--item">
-            <a href="#" class="nav__link dark"
-              >For Teams
-              <ion-icon
-                class="icon nav--icon hidden"
-                name="arrow-dropdown"
-              ></ion-icon>
-            </a>
-          </li>
-          <li class="navbar__content__menu--itemRight shiftRight">
-            <a href="#" class="nav__search dark"
-              ><ion-icon
-                class="icon"
-                name="search"
-                class="searchIcon"
-              ></ion-icon
-            ></a>
-          </li>
-          <li class="navbar__content__menu--itemRight">
-            <a href="#" class="nav__link dark">Log In</a>
-          </li>
-          <li class="navbar__content__menu--itemRight navMenuIcon hidden">
-            <a href="#" class="nav__link dark"
-              ><ion-icon class="icon" name="menu"></ion-icon
-            ></a>
-          </li>
-        </ul>
+        <div class="logo">
+          <img
+            src="https://hackyourfuture2023.s3.eu-north-1.amazonaws.com/asset/img/logo.svg"
+            alt="logo"
+          />
+        </div>
+        <div class="navbar__content--itemLeft">
+          <ul class="navbar__content__menu">
+            <li class="navbar__content__menu--item">
+              <a href="#" class="nav__link dark"
+                >Catalog
+                <ion-icon
+                  class="icon nav--icon"
+                  name="arrow-dropdown"
+                ></ion-icon>
+              </a>
+              <div class="navbar__dropdown__menu">
+                <p>text</p>
+              </div>
+            </li>
+            <li class="navbar__content__menu--item">
+              <a href="#" class="nav__link dark"
+                >Resources
+                <ion-icon
+                  class="icon nav--icon"
+                  name="arrow-dropdown"
+                ></ion-icon
+              ></a>
+              <div class="navbar__dropdown__menu">
+                <p>text</p>
+              </div>
+            </li>
+            <li class="navbar__content__menu--item">
+              <a href="#" class="nav__link dark"
+                >Community
+                <ion-icon
+                  class="icon nav--icon"
+                  name="arrow-dropdown"
+                ></ion-icon
+              ></a>
+              <ul class="navbar__dropdown__menu displayBlock cursor">
+                <li class="navbar__dropdown__menu--item cursor">Forums</li>
+                <li class="navbar__dropdown__menu--item cursor">Discord</li>
+                <li class="navbar__dropdown__menu--item cursor">Chapters</li>
+                <li class="navbar__dropdown__menu--item cursor">Events</li>
+                <li class="navbar__dropdown__menu--item cursor">Code Crew</li>
+                <li class="navbar__dropdown__menu--item cursor">
+                  Learners Stories
+                </li>
+              </ul>
+            </li>
+            <li class="navbar__content__menu--item">
+              <a href="#" class="nav__link dark"
+                >Pricing
+                <ion-icon
+                  class="icon nav--icon"
+                  name="arrow-dropdown"
+                ></ion-icon
+              ></a>
+              <ul class="navbar__dropdown__menu">
+                <li class="navbar__dropdown__menu--item cursor">
+                  For Individuals
+                </li>
+                <li class="navbar__dropdown__menu--item cursor">
+                  For Students
+                </li>
+                <li class="navbar__dropdown__menu--item cursor">For Teams</li>
+              </ul>
+            </li>
+            <li class="navbar__content__menu--item">
+              <a href="#" class="nav__link dark"
+                >For Teams
+                <ion-icon
+                  class="icon nav--icon hidden"
+                  name="arrow-dropdown"
+                ></ion-icon>
+              </a>
+              <div></div>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar__content--itemRight shiftRight">
+          <ul class="navbar__content--itemRight--menu noListStyle">
+            <li class="shiftRight">
+              <a href="#" class="nav__search dark nav__link"
+                ><ion-icon
+                  class="icon"
+                  name="search"
+                  class="searchIcon"
+                ></ion-icon
+              ></a>
+            </li>
+            <li class="navbar__content__menu--item">
+              <a href="#" class="nav__link">Log In</a>
+              <div></div>
+            </li>
+            <li class="navMenuIcon hidden">
+              <a href="#" class="nav__link"
+                ><ion-icon class="icon" name="menu"></ion-icon
+              ></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -83,7 +133,7 @@
       <section class="header__content">
         <div class="header__content__teacher">
           <img
-            src="./asset/img/teacher.webp"
+            src="https://hackyourfuture2023.s3.eu-north-1.amazonaws.com/asset/img/teacher.webp"
             alt="teacher"
             class="img teacher--img"
           />
@@ -337,7 +387,10 @@
           <a href="#" class="btn info--btn quiz__info__btn">Take the quiz</a>
         </div>
         <div class="info--img">
-          <img src="./asset/img/window.svg" alt="window" />
+          <img
+            src="https://hackyourfuture2023.s3.eu-north-1.amazonaws.com/asset/img/window.svg"
+            alt="window"
+          />
         </div>
       </div>
     </section>
@@ -359,7 +412,7 @@
           <div class="testimonial">
             <img
               class="testimonial__img img"
-              src="./asset/img/Cristian-Tera__n.jpeg"
+              src="https://hackyourfuture2023.s3.eu-north-1.amazonaws.com/asset/img/Cristian-Tera__n.jpeg"
               alt="cristian"
             />
             <h3 class="testimonial__header">
@@ -370,7 +423,7 @@
           <div class="testimonial">
             <img
               class="testimonial__img img"
-              src="./asset/img/De-Shaun-Broadnax.jpeg"
+              src="https://hackyourfuture2023.s3.eu-north-1.amazonaws.com/asset/img/De-Shaun-Broadnax.jpeg"
               alt="cristian"
             />
             <h3 class="testimonial__header">
@@ -381,7 +434,7 @@
           <div class="testimonial">
             <img
               class="testimonial__img img"
-              src="./asset/img/SerenaIsone1.jpeg"
+              src="https://hackyourfuture2023.s3.eu-north-1.amazonaws.com/asset/img/SerenaIsone1.jpeg"
               alt="cristian"
             />
             <h3 class="testimonial__header">
@@ -392,7 +445,7 @@
           <div class="testimonial">
             <img
               class="testimonial__img img"
-              src="./asset/img/Julia-Jubileu.jpeg"
+              src="https://hackyourfuture2023.s3.eu-north-1.amazonaws.com/asset/img/Julia-Jubileu.jpeg"
               alt="cristian"
             />
             <h3 class="testimonial__header">
@@ -409,7 +462,7 @@
       <div class="signUp__container container">
         <div class="info--img signUp--imgContainer">
           <img
-            src="./asset/img/student.webp"
+            src="https://hackyourfuture2023.s3.eu-north-1.amazonaws.com/asset/img/student.webp"
             alt="window"
             class="signUp--img"
           />
@@ -426,6 +479,24 @@
       </div>
     </section>
 
+    <!-- Video section -->
+    <section class="video">
+      <div class="video__container">
+        <ion-icon
+          name="close"
+          class="cursor closeNotice video__close"
+        ></ion-icon>
+        <iframe
+          width="280"
+          height="157.5"
+          src="https://www.youtube.com/embed/BdQU3Tcf_hQ?si=Oi3oAdtUUZVfPwRE"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
     <!-- footer section -->
     <footer>
       <div class="footer container">
@@ -437,7 +508,10 @@
               <li class="cursor footer__item">careers</li>
               <li class="cursor footer__item">affiliates</li>
               <li class="footerlogo">
-                <img src="/asset/img/logo.svg" alt="logo" />
+                <img
+                  src="https://hackyourfuture2023.s3.eu-north-1.amazonaws.com/asset/img/logo.svg"
+                  alt="logo"
+                />
               </li>
             </ol>
           </div>
@@ -536,7 +610,12 @@
           </li>
           <li class="cursor footer__item footer__bottom__item">Terms</li>
         </ol>
-        <p class="footer__bottom__text">Clone with ❤️ by tibet.dev</p>
+        <p class="footer__bottom__text">
+          Clone with ❤️ by
+          <a href="https://tenzin.tibet.dev" class="nav__link"
+            >tenzin.tibet.dev
+          </a>
+        </p>
       </div>
     </footer>
     <!-- script -->

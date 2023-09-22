@@ -150,6 +150,10 @@ body {
   text-align: center;
 }
 
+.noListStyle {
+  list-style: none;
+}
+
 .nav__link,
 .courses__navLink {
   text-decoration: none;
@@ -161,19 +165,31 @@ body {
   opacity: 0.5;
 }
 
+.displayBlock {
+  display: block;
+}
+
 @keyframes slideIn {
   from {
-    opacity: 0%;
+    transform: translateX(100%);
   }
   to {
-    opacity: 100%;
+    transform: translateX(0%);
+  }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
   }
 }
 .notice {
   font-size: smaller;
   padding: 12px;
   background-color: #ffd300;
-  animation: slideIn 4s 0ms ease-in;
+  animation: slideDown 1s 0ms ease-in;
 }
 .notice__content {
   display: flex;
@@ -187,19 +203,44 @@ body {
   top: 0px;
   background-color: #fff0e5;
   z-index: 10000;
+  position: relative;
 }
-.navbar .navbar__content {
+.navbar__content {
   display: flex;
 }
-.navbar .navbar__content .navbar__content__menu {
+.navbar__content--itemRight, .navbar__content--itemLeft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar__content--itemRight--menu {
+  display: flex;
+}
+.navbar__content__menu {
   list-style-type: none;
   display: flex;
   align-items: center;
   width: 100%;
 }
-.navbar .navbar__content .navbar__content__menu--item,
-.navbar .navbar__content .navbar__content__menu--itemRight {
+.navbar__content__menu--item, .navbar__content__menu--itemRight {
   padding: 0px 8px;
+}
+
+.navbar__dropdown__menu {
+  display: none;
+  list-style: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid black;
+  padding: 1rem;
+}
+.navbar__dropdown__menu--item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.navbar__dropdown__menu--item:hover {
+  color: #3a11e5;
 }
 
 .header__content {
@@ -569,8 +610,35 @@ body {
   font-size: small;
 }
 
+.video {
+  display: relative;
+  position: relative;
+}
+.video__close {
+  position: absolute;
+  top: -52px;
+  left: -15px;
+  font-size: larger;
+  color: #11162f;
+  background-color: rgba(234, 253, 197, 0.8);
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+.video__container {
+  display: absolute;
+  max-width: fit-content;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+  background-color: #ffd300;
+  border: 1rem solid #3a11e5;
+  opacity: 1;
+  animation: slideIn 3s 0ms both;
+}
+
 @media only screen and (max-width: 900px) {
-  .navbar__content__menu--item {
+  .navbar__content--itemLeft {
     display: none;
   }
   .navMenuIcon {

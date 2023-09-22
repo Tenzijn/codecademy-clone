@@ -23,23 +23,60 @@ document.querySelector('.close').addEventListener('click', function () {
 // variables
 const noticeBar = document.querySelector('.notice');
 const noticeCloseBtn = document.querySelector('.closeNotice');
+const videoClose = document.querySelector('.video__close');
+const video = document.querySelector('.video');
 const navItem = document.querySelectorAll('.nav__link');
+const navContent = document.querySelectorAll('.navbar__content__menu--item');
+const navMenuIcon = document.querySelector('.navMenuIcon');
 
 // closing the Notice bar
 noticeCloseBtn.addEventListener('click', () => {
   noticeBar.remove();
 });
 
+// closing video
+videoClose.addEventListener('click', () => video.remove());
+
 //Rotating of arrow in navigation button
 // adding class
+
 navItem.forEach((item) =>
   item.addEventListener('mouseover', () =>
-    item.firstElementChild.classList.add('rotate180')
+    item.firstElementChild
+      ? item.firstElementChild.classList.add('rotate180')
+      : ''
   )
 );
+
 // removing class
 navItem.forEach((item) =>
   item.addEventListener('mouseout', () =>
-    item.firstElementChild.classList.remove('rotate180')
+    item.firstElementChild
+      ? item.firstElementChild.classList.remove('rotate180')
+      : ''
   )
 );
+
+// Displaying dropdown
+navContent.forEach((item) =>
+  item.addEventListener(
+    'mouseover',
+    () => (item.lastElementChild.style.display = 'block')
+  )
+);
+
+navContent.forEach((item) =>
+  item.addEventListener(
+    'mouseout',
+    () => (item.lastElementChild.style.display = 'none')
+  )
+);
+
+// navContent.forEach((item) =>
+//   item.addEventListener(
+//     'mouseout',
+//     () => (item.lastElementChild.style.display = 'none')
+//   )
+// );
+
+navMenuIcon.addEventListener('click', () => console.log('hello'));
