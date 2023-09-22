@@ -161,44 +161,6 @@ body {
   opacity: 0.5;
 }
 
-.course--card {
-  background-color: #fff0e5;
-  color: #11162f;
-  border-radius: 3px;
-  min-height: 220px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.course--card .courseHeader {
-  padding: 5px 10px;
-  font-weight: 100;
-  font-size: small;
-  font-family: menlo;
-  background-color: #eafdc5;
-  border-radius: 3px;
-}
-.course--card .courseBody {
-  padding: 10px;
-  font-weight: 100;
-  font-size: small;
-  height: 100%;
-}
-.course--card .courseBody .courseName {
-  margin-bottom: 1em;
-}
-.course--card .courseFooter {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  border-top: 1px dotted black;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding-top: 5px;
-  padding-bottom: 10px;
-  font-size: small;
-}
-
 @keyframes slideIn {
   from {
     opacity: 0%;

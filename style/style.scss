@@ -161,7 +161,6 @@ body {
   text-align: center;
 }
 
-//Main navigation bar style
 .nav__link,
 .courses__navLink {
   text-decoration: none;
@@ -171,45 +170,6 @@ body {
 .nav__link:hover,
 .courses__navLink:hover {
   opacity: 0.5;
-}
-
-.course--card {
-  background-color: $primary;
-  color: $darkBlue;
-  border-radius: 3px;
-  min-height: 220px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  .courseHeader {
-    padding: 5px 10px;
-    font-weight: 100;
-    font-size: small;
-    font-family: menlo;
-    background-color: $lightGreen;
-    border-radius: 3px;
-  }
-  .courseBody {
-    padding: 10px;
-    font-weight: 100;
-    font-size: small;
-    height: 100%;
-    .courseName {
-      margin-bottom: 1em;
-    }
-  }
-  .courseFooter {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    border-top: 1px dotted black;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 10px;
-    font-size: small;
-  }
 }
 
 //animation
