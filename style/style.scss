@@ -12,6 +12,7 @@ $lightblue: #3a11e5;
 $blue: #1e096e;
 $darkBlue: #11162f;
 $yellow: #ffd300;
+$darkYellow: #8a0000;
 $black: #000000;
 $gray: #201e2f;
 $lightGreen: #eafdc5;
@@ -32,6 +33,10 @@ body {
 // Utility class
 .hidden {
   display: none;
+}
+
+.show {
+  display: block;
 }
 
 .container {
@@ -179,14 +184,17 @@ body {
 .displayBlock {
   display: block;
 }
-
-//animation
-@keyframes slideIn {
+input {
+  width: 100%;
+  padding: 10px;
+}
+// animation
+@keyframes showIn {
   from {
-    transform: translateX(100%);
+    opacity: 0;
   }
   to {
-    transform: translateX(0%);
+    opacity: 100%;
   }
 }
 
@@ -210,7 +218,61 @@ body {
     text-align: center;
   }
 }
+// mobile navigation
+.mobile__nav {
+  display: none;
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  height: 100dvh;
+  z-index: 2;
+  &__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    justify-content: space-between;
+    background-color: $primary;
+  }
 
+  &__body {
+    display: block;
+    border-bottom: 1px solid $gray;
+    padding-bottom: 2rem;
+    .searchBox {
+      margin-top: 1rem;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    ion-icon {
+      padding-left: 0;
+    }
+  }
+  &__item:hover,
+  &__link:hover {
+    opacity: 0.5;
+    transition: opacity 0.5s;
+    cursor: pointer;
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+    .btn {
+      margin: 0.4rem;
+    }
+  }
+}
 // Navigation bar
 .navbar {
   height: 79px;
@@ -218,8 +280,7 @@ body {
   position: sticky;
   top: 0px;
   background-color: $primary;
-  z-index: 10000;
-  position: relative;
+  z-index: 1;
 
   &__content {
     display: flex;
@@ -246,6 +307,22 @@ body {
       }
     }
   }
+}
+.scrollTop {
+  display: none;
+  .scrollUpIcon {
+    transition: font-size 1s;
+    font-size: 5rem;
+    position: fixed;
+    z-index: 10;
+    bottom: 2rem;
+    right: 3rem;
+    color: $darkYellow;
+  }
+}
+.scrollUpIcon:hover {
+  font-size: 6rem;
+  opacity: 0.7;
 }
 
 .navbar__dropdown__menu {
@@ -299,10 +376,6 @@ body {
     &--header {
       line-height: 2rem;
       padding-bottom: 10px;
-    }
-    &__input {
-      width: 100%;
-      padding: 10px;
     }
 
     &--button {
@@ -587,6 +660,7 @@ body {
 //signUp Section
 .signUp {
   background-color: $lightblue;
+  color: $primary;
   &__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -676,13 +750,18 @@ body {
 
 // video section
 .video {
-  display: relative;
-  position: relative;
-
+  position: fixed;
+  top: 0;
+  left: 0%;
+  background-color: rgba(96, 96, 96, 0.8);
+  height: 100dvh;
+  width: 100%;
+  z-index: 1000;
+  animation: showIn 2s 0ms both;
   &__close {
     position: absolute;
     top: -52px;
-    left: -15px;
+    right: -15px;
     font-size: larger;
     color: $darkBlue;
     background-color: rgb(234, 253, 197, 0.8);
@@ -690,16 +769,15 @@ body {
     border-radius: 4px;
   }
   &__container {
-    display: absolute;
     max-width: fit-content;
     position: fixed;
-    bottom: 1rem;
-    right: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 0.5rem;
     background-color: $yellow;
     border: 1rem solid $lightblue;
     opacity: 1;
-    animation: slideIn 3s 0ms both;
   }
 }
 
@@ -712,10 +790,10 @@ body {
       }
     }
   }
-
   .navMenuIcon {
     display: block;
   }
+
   .header__content {
     display: block;
     height: 100%;
@@ -757,5 +835,8 @@ body {
   .footer__bottom__item,
   .footer__bottom__text {
     margin: 1rem;
+  }
+  .video {
+    // display: none;
   }
 }
